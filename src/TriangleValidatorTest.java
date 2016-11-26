@@ -1,14 +1,15 @@
+import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
 
-import junit.framework.TestCase;
+public class TriangleValidatorTest {
+    @Test
+    public void testValidate() {
+        TriangleValidator v = new TriangleValidator();
 
-public class TriangleValidatorTest extends TestCase {
+        boolean actual = v.validate(2, 3, 4);
 
-	public void testValidate() {
-		TriangleValidator v = new TriangleValidator(0, 2, 3);
-		boolean expected = v.validate(2,3, 4);
-		
-		assertEquals(expected,v.validate(v.getA(), v.getB(), v.getC()));
-	}
+        assertEquals(true, actual);
+    }
 
 }
